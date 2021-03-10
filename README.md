@@ -1,13 +1,13 @@
 PEP 8 -- Style Guide for Python Code 
 
 
-###Introduction
+### Introduction
 
-###A Foolish Consistency is the Hobgoblin of Little Minds
+### A Foolish Consistency is the Hobgoblin of Little Minds
 
-###Code Lay-out
+### Code Lay-out
 
-####Indentation
+#### Indentation
 Use 4 spaces per indentation level.
 
     \#Aligned with opening delimiter.
@@ -38,28 +38,28 @@ The closing brace/bracket/parenthesis on multiline constructs may either line up
         'd', 'e', 'f',
         )
 
-####Tabs or Spaces?
+#### Tabs or Spaces?
 Spaces are the preferred indentation method.
 
 Tabs should be used solely to remain consistent with code that is already indented with tabs.
 
 Python 3 disallows mixing the use of tabs and spaces for indentation.
 
-####Maximum Line Length
+#### Maximum Line Length
 Limit all lines to a maximum of 79 characters.
 
     with open('/path/to/some/file/you/want/to/read') as file_1, \
          open('/path/to/some/file/being/written', 'w') as file_2:
         file_2.write(file_1.read())
 
-####Should a Line Break Before or After a Binary Operator?
+#### Should a Line Break Before or After a Binary Operator?
     income = (gross_wages
               + taxable_interest
               + (dividends - qualified_dividends)
               - ira_deduction
               - student_loan_interest)
 
-####Blank Lines
+#### Blank Lines
 
 Surround top-level function and class definitions with two blank lines.
 
@@ -69,17 +69,17 @@ Extra blank lines may be used (sparingly) to separate groups of related function
 
 Use blank lines in functions, sparingly, to indicate logical sections.
     
-####Source File Encoding
+#### Source File Encoding
 Code in the core Python distribution should always use UTF-8 (or ASCII in Python 2).
 
 Files using ASCII (in Python 2) or UTF-8 (in Python 3) should not have an encoding declaration.
 
-####Imports
+#### Imports
     import os
     import sys
     from subprocess import Popen, PIPE
     
-####Module Level Dunder Names
+#### Module Level Dunder Names
 Module level "dunders" (i.e. names with two leading and two trailing underscores) such as \__all__, \__author__, \__version__, etc. should be placed after the module docstring but before any import statements except from \__future__ imports. Python mandates that future-imports must appear in the module before any other code except docstrings:
 
     """This is the example module.
@@ -96,12 +96,12 @@ Module level "dunders" (i.e. names with two leading and two trailing underscores
     import os
     import sys
 
-###String Quotes
+### String Quotes
 In Python, single-quoted strings and double-quoted strings are the same.
 
-###Whitespace in Expressions and Statements
+### Whitespace in Expressions and Statements
 
-####Pet Peeves
+#### Pet Peeves
 Immediately inside parentheses, brackets or braces:
 
     spam(ham[1], {eggs: 2})
@@ -123,7 +123,7 @@ However, in a slice the colon acts like a binary operator, and should have equal
     ham[lower + offset : upper + offset]
 
 
-####Other Recommendations
+#### Other Recommendations
 
     i = i + 1
     submitted += 1
@@ -145,7 +145,7 @@ However, in a slice the colon acts like a binary operator, and should have equal
     do_one()
     do_two()
     do_three()
-###When to Use Trailing Commas
+### When to Use Trailing Commas
 
     FILES = ('setup.cfg',)
 
@@ -157,7 +157,7 @@ However, in a slice the colon acts like a binary operator, and should have equal
             error=True,
             )
 
-###Comments
+### Comments
     
 - Block Comments
     
@@ -165,11 +165,11 @@ However, in a slice the colon acts like a binary operator, and should have equal
 
 - Documentation Strings
 
-###Naming Conventions
+### Naming Conventions
     
-####Overriding Principle
-####Descriptive: Naming Styles
-####Prescriptive: Naming Conventions
+#### Overriding Principle
+#### Descriptive: Naming Styles
+#### Prescriptive: Naming Conventions
 - Names to Avoid: l, I, O
 - ASCII Compatibility
 - Package and Module Names
@@ -182,13 +182,13 @@ However, in a slice the colon acts like a binary operator, and should have equal
 - Method Names and Instance Variables
 - Constants
 - Designing for Inheritance
-####Public and Internal Interfaces
+#### Public and Internal Interfaces
 
-###Programming Recommendations
+### Programming Recommendations
 
-###Function Annotations
+### Function Annotations
 
-###Variable Annotations
+### Variable Annotations
     code: int
 
     class Point:
