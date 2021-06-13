@@ -4,10 +4,7 @@ n = int(input())
 # a = list(map(int, input().split()))
 
 # if each element of array on 1 line
-a = []
-for i in range(n):
-    x = int(input())
-    a.append(x)
+a = [int(input()) for _ in range(n)]
 
 result = 0
 for i in range(n):
