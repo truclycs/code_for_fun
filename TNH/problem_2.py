@@ -1,26 +1,26 @@
-def get_numbers(input_string):    
-    number = ""
-    for char in input_string:
+def get_numbers(s):
+    numbers = ""
+    for char in s:
         if '0' <= char <= '9':
-            number += char
-    return number
+            numbers += char
+    return numbers
 
 
 def get_result(numbers):
     result = ""
     current_string = numbers[0]
     for i in range(1, len(numbers)):
-        if numbers[i] <= numbers[i - 1]:
+        if numbers[i - 1] >= numbers[i]:
             current_string += numbers[i]
             if len(current_string) > len(result):
                 result = current_string
         else:
-            current_string = numbers[i]           
-            
-    return result            
-        
+            current_string = numbers[i]
+
+    return result
+
 
 if __name__ == '__main__':
-    input_string = input()
-    numbers = get_numbers(input_string)
-    print(get_result(numbers))   
+    s = input()
+    numbers = get_numbers(s)
+    print(get_result(numbers))

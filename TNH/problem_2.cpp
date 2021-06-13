@@ -1,12 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 
-string get_numbers(string input_string) {
+string get_numbers(string s) {
     string numbers = "";
-    for (int i = 0; i < input_string.length(); i++) {
-        if (input_string[i] >= '0' && input_string[i] <= '9') {
-            numbers += input_string[i];
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] >= '0' && s[i] <= '9') {
+            numbers += s[i];
         } 
     }
     return numbers;
@@ -18,7 +18,7 @@ string get_result(string numbers) {
     result = numbers[0];
     current_string = "";
     for (int i = 1; i < numbers.length(); i++) {
-        if (numbers[i] <= numbers[i - 1]) {
+        if (numbers[i - 1] >= numbers[i]) {
             current_string += numbers[i];
             if (result.length() < current_string.length()) {
                 result = current_string;
@@ -33,9 +33,9 @@ string get_result(string numbers) {
 
 
 int main() {
-    string input_string, numbers;
-    cin >> input_string;
-    numbers = get_numbers(input_string);
+    string s, numbers;
+    cin >> s;
+    numbers = get_numbers(s);
     cout << get_result(numbers);
     return 0;
 }
