@@ -16,10 +16,9 @@ class TestingCenterCorrector:
     def get_idx_line(self, s):
         s = no_accent_vietnamese(s).lower().split(' ')
 
+        idx_lines = []
         if self.check_existence(s[len(s) - 1]):
             idx_lines = list(self.testing_center_words[s[len(s) - 1]])
-        else:
-            idx_lines = []
 
         for i in range(len(s) - 1):
             if self.check_existence(s[i]):
@@ -27,29 +26,38 @@ class TestingCenterCorrector:
             if self.check_existence(s[i] + s[i + 1]):
                 idx_lines += list(self.testing_center_words[s[i] + s[i + 1]])
 
+        if len(idx_lines) == 0:
+            return s
+
         idx_lines, counts = np.unique(np.array(idx_lines), return_counts=True)
         indexes = idx_lines[counts == counts.max()]
         return indexes
 
-    def get_result(self, indexes):
+    def get_result(self, indexes, s):
         if len(indexes) == 1:
             return self.testing_center_list[int(indexes)]
         else:
-            pass
+            return s
 
     def __call__(self, s):
         indexes = self.get_idx_line(s)
-        result = self.get_result(indexes)
+        result = self.get_result(indexes, s)
         return result
 
 
 if __name__ == '__main__':
-    testcases = ["TRUNG TÂM KIỂM NGHIỆM THUỐC - THỰC PHẨM VÀ NGHIÊN CỬU ỨNG DỤNG",
-                 "TUV SUD Vieam Co., Ltd.",
-                 ""]
+    with open("output.txt", "r") as f:
+        output = f.read().split('\n')
+
+    testcases = []
+    for line in output:
+        testcases.append(line.split('\t')[-1])
 
     corrector = TestingCenterCorrector(testing_center_list_path='testing_center_list.yaml',
                                        testting_center_words_path='testing_center_words.pkl')
 
     for testcase in testcases:
-        print(corrector(testcase))
+        if testcase:
+            print('testcase', testcase)
+            print('corrects', corrector(testcase))
+            print()
