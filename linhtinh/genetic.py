@@ -64,6 +64,7 @@ class Individual(object):
     def __lt__(self, o):
         return self.fitness < o.fitness
 
+
 def main():
     population = []
     generation = 1
@@ -83,7 +84,7 @@ def main():
                 best_individual = individual
 
         print('Generation {} - Best individual: {}'.format(generation, population[0]))
-        
+
         # nếu cá thể tốt nhất trong quần thể có thể trạng bằng 0 (đồng nghĩa với chuỗi là
         # "Bach Khoa Ho Chi Minh University") thì dừng vòng lặp
         if population[0].fitness == 0:
@@ -113,6 +114,7 @@ def main():
         generation += 1
 
     print('\nAnswer foun at generation {} with population size {}\nIndividual: {}'.format(generation, POPULATION_SIZE, population[0]))
+
 
 if __name__ == '__main__':
     main()

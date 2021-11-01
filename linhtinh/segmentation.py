@@ -3,42 +3,42 @@ import numpy as np
 
 visualization = False
 img_path = "0E59FA70-CA5F-4B80-8673-B8260384CF1F.jpg"
-img_paths = [
-    "0E59FA70-CA5F-4B80-8673-B8260384CF1F.jpg",
-    "3BB3E3CC-D6D3-4D6D-A33E-DCF03BF02DC7.jpg",
-    "57ABF66A-5EE5-4B29-B812-B61F0FE1ED32.jpg",
-    "317CECEB-3F82-43F9-858E-F5DC6BBAECBA.jpg",
-    "A0F74E97-698B-472B-BAEE-E61D5EC6D18C.jpg",
-    "BAAEA76C-5C74-4FD3-8A5D-2CE6A50913DC.jpg",
-    "C0685E55-6F9D-42A0-A7E6-ABA079550498.jpg",
-    "F7E44E69-4630-45A6-8C7D-DBF5BEFCB7D9.jpg"
-]
+img_paths = ["0E59FA70-CA5F-4B80-8673-B8260384CF1F.jpg",
+             "3BB3E3CC-D6D3-4D6D-A33E-DCF03BF02DC7.jpg",
+             "57ABF66A-5EE5-4B29-B812-B61F0FE1ED32.jpg",
+             "317CECEB-3F82-43F9-858E-F5DC6BBAECBA.jpg",
+             "A0F74E97-698B-472B-BAEE-E61D5EC6D18C.jpg",
+             "BAAEA76C-5C74-4FD3-8A5D-2CE6A50913DC.jpg",
+             "C0685E55-6F9D-42A0-A7E6-ABA079550498.jpg",
+             "F7E44E69-4630-45A6-8C7D-DBF5BEFCB7D9.jpg"]
+
 
 def enhance_image(img):
-    #-----Converting image to LAB Color model----------------------------------- 
-    lab= cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+    # -----Converting image to LAB Color model-----------------------------------
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
 
-    #-----Splitting the LAB image to different channels-------------------------
+    # -----Splitting the LAB image to different channels-------------------------
     l, a, b = cv2.split(lab)
 
-    #-----Applying CLAHE to L-channel-------------------------------------------
-    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+    # -----Applying CLAHE to L-channel-------------------------------------------
+    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
     cl = clahe.apply(l)
 
-    #-----Merge the CLAHE enhanced L-channel with the a and b channel-----------
-    limg = cv2.merge((cl,a,b))
+    # -----Merge the CLAHE enhanced L-channel with the a and b channel-----------
+    limg = cv2.merge((cl, a, b))
 
-    #-----Converting image from LAB Color model to RGB model--------------------
+    # -----Converting image from LAB Color model to RGB model--------------------
     final = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
 
     return final
+
 
 for img_path in img_paths:
     img = cv2.imread(img_path)
 
     img = enhance_image(img)
     height, width, channels = img.shape
-    
+
     ratio = height / width
     NW = int(500)
     NH = int(NW * ratio)
@@ -116,7 +116,7 @@ for img_path in img_paths:
         # cv2.imshow('show img', thresh)
         # cv2.waitKey()
     else:
-        print("Successful")            
+        print("Successful")
 
     h_mean = round(sum([bb[3] for bb in bouding_boxes])/len(bouding_boxes))
     sorted(bouding_boxes, key=lambda x: x[1])
@@ -127,11 +127,11 @@ for img_path in img_paths:
         scale_w = int(w*1.1)
         scale_y = max(0, int(y-standard_h*0.35))
         scale_h = int(standard_h*1.8)
-        color = (255, 0, 0) 
-            
+        color = (255, 0, 0)
+
         start_point = (scale_x, scale_y)
         end_point = (scale_x+scale_w, scale_y+scale_h)
-        
+
         thickness = 1
         draw_img = cv2.rectangle(draw_img, start_point, end_point, color, thickness)
     cv2.imwrite("W_drawed_" + img_path, draw_img)
