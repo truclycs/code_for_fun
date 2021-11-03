@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 
-NUM_OF_PAPERS = 1
+NUM_OF_PAPERS = 1165
 BOX_HEIGHT_ID, BOX_WIDTH_ID = 150, 150
 BOX_HEIGHT, BOX_WIDTH = 175, 2170
 IMAGE_WIDTH, IMAGE_HEIGHT = 2490, 3510
@@ -9,21 +9,23 @@ DISTANCE = 225
 DIST_TEXT_BOX = 90
 NOTE = 'Chú ý: Viết đúng tất cả nội dung bao gồm các dấu câu, dấu chấm, dấu phẩy.\nNội dung viết từ sát lề bên trái, nằm trọn vẹn trong khung và trên cùng một dòng.'
 
-TEXT = ['Xã Quỳnh Hồng, Quỳnh Phụ, Thái Bình',
-        'Thị trấn Lịch Hội Thượng, Trần Đề, Sóc Trăng',
-        'Xã Thượng Nhật, Nam Đông, Thừa Thiên Huế',
-        'Thị trấn Gia Bình, Gia Bình, Bắc Ninh',
-        'Xã Diễn Hồng, Diễn Châu, Nghệ An',
-        'Phường 14, Phú Nhuận, Hồ Chí Minh',
-        'Phường Trần Hưng Đạo, Thành phố Quảng Ngãi, Quảng Ngãi',
-        'Xã Thanh Lương, Văn Chấn, Yên Bái',
-        'Xã Liên Thủy, Lệ Thủy, Quảng Bình',
-        'Phường Trần Phú, Thành phố Hải Dương, Hải Dương']
+
+patterns = ['*.txt']
+text_lines_dir = '/home/trucly/Documents/DATASET/hw_collect/text_files/'
+pdf_files_dir = '/home/trucly/Documents/DATASET/hw_collect/pdf_files/'
+
+
+def get_data(data_path):
+    with open(data_path, "r") as f:
+        data = f.read()
+    return data.split('\n')
 
 
 if __name__ == '__main__':
     for i in range(1, NUM_OF_PAPERS + 1):
         index = '%04d' % i
+
+        TEXT = get_data(text_lines_dir + str(index) + '.txt')
 
         # Create new image with A4 size
         image = Image.new(mode='RGB', size=(IMAGE_WIDTH, IMAGE_HEIGHT), color='white')
@@ -55,6 +57,5 @@ if __name__ == '__main__':
             shape = [(top_left_x, top_left_y), (top_left_x + BOX_WIDTH, top_left_y + BOX_HEIGHT)]
             image_draw.rectangle(shape, fill='white', outline='black', width=4)
 
-        image.show()
         pdf = image.convert('RGB')
-        pdf.save('pdf_files/' + str(index) + '.pdf')
+        pdf.save(pdf_files_dir + str(index) + '.pdf')
