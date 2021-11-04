@@ -7,6 +7,13 @@ from shapely.geometry import box, Point, Polygon
 
 MIN_AREA = 5000
 MAX_AREA = 500000
+
+CROP_PIXELS = 5
+PADDING = 5
+DISTANCE = 0.1
+# RATIO_HEIGHT = 0.3
+# RATIO_WIDTH = 1
+
 TEXTLINES_DIR = '/home/trucly/Documents/DATASET/hw_collect/textlines/'
 IMGAES_DIR = '/home/trucly/Documents/DATASET/hw_collect/images/'
 TEXT_FILES_DIR = '/home/trucly/Documents/DATASET/hw_collect/text_files/'
@@ -157,6 +164,43 @@ class EnclosingQuadrilateral:
         return enclosing_quads
 
 
+def crop_image(image):
+    image_copy = image.copy()
+    height, width, _ = image.shape
+    height, width = height - CROP_PIXELS, width - CROP_PIXELS
+    image = image[CROP_PIXELS: height, CROP_PIXELS: width]
+
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    gray = cv2.blur(gray, (5, 5), 0)
+    # ret, thresh1 = cv2.threshold(gray, 135, 255, cv2.THRESH_BINARY_INV)
+    thresh1 = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 21, 10)
+
+    rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+    dilation = cv2.dilate(thresh1, rect_kernel, iterations=1)
+    contours, hierarchy = cv2.findContours(dilation, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+
+    rects = []
+    for contour in contours:
+        rects.append(cv2.boundingRect(contour))
+    rects.sort(key=lambda x: x[0])
+
+    y_top, y_bottom = height, 0
+    x_left, x_right = width, 0
+    for rect in rects:
+        x, y, w, h = rect
+        # if h >= height * RATIO_HEIGHT and w <= width * RATIO_WIDTH and (x - x_right) < DISTANCE * width:
+        if x - x_right < DISTANCE * width:
+            y_top = min(y_top, y)
+            y_bottom = max(y_bottom, y + h)
+            x_left = min(x_left, x)
+            x_right = max(x_right, x + w)
+
+    crop_image = image_copy[max(0, y_top - PADDING): min(y_bottom + PADDING, height),
+                            max(0, x_left - PADDING): min(x_right + PADDING, width)]
+
+    return crop_image
+
+
 if __name__ == '__main__':
     patterns = ['*.jpg', '*.png']
     paths = []
@@ -185,6 +229,10 @@ if __name__ == '__main__':
                 continue
 
             filename = idx + '_' + str(i)
+
+            cv2.imwrite(TEXTLINES_DIR + filename + '_uncrop.png', warp_image)
+
+            warp_image = crop_image(warp_image)
             cv2.imwrite(TEXTLINES_DIR + filename + '.png', warp_image)
 
             with open(TEXTLINES_DIR + filename + '.txt', 'w') as f:
