@@ -6,8 +6,8 @@ def insertion_sort(a):
             a[j + 1] = a[j]
             j -= 1
         a[j + 1] = tmp
-    return a
 
 
 a = [9, 3, 6, 2, 5]
-print(insertion_sort(a))
+insertion_sort(a)
+print(a)
