@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 
-NUM_OF_PAPERS = 1165
+START_FILE = 1166
+NUM_OF_PAPERS = 1668
 BOX_HEIGHT_ID, BOX_WIDTH_ID = 150, 150
 BOX_HEIGHT, BOX_WIDTH = 175, 2170
 IMAGE_WIDTH, IMAGE_HEIGHT = 2490, 3510
@@ -22,7 +23,7 @@ def get_data(data_path):
 
 
 if __name__ == '__main__':
-    for i in range(1, NUM_OF_PAPERS + 1):
+    for i in range(START_FILE, NUM_OF_PAPERS + 1):
         index = '%04d' % i
 
         TEXT = get_data(text_lines_dir + str(index) + '.txt')
