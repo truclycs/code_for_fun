@@ -5,7 +5,7 @@ import itertools
 from pathlib import Path
 from shapely.geometry import box, Point, Polygon
 
-MIN_AREA = 5000
+MIN_AREA = 4000
 MAX_AREA = 500000
 
 CROP_PIXELS = 5
@@ -14,7 +14,7 @@ DISTANCE = 0.1
 # RATIO_HEIGHT = 0.3
 # RATIO_WIDTH = 1
 
-TEXTLINES_DIR = '/home/trucly/Documents/DATASET/hw_collect/textlines/'
+TEXTLINES_DIR = '/home/trucly/Documents/DATASET/hw_collect/TEXTLINES/'
 IMGAES_DIR = '/home/trucly/Documents/DATASET/hw_collect/images/'
 TEXT_FILES_DIR = '/home/trucly/Documents/DATASET/hw_collect/text_files/'
 
@@ -208,7 +208,9 @@ if __name__ == '__main__':
         paths += list(Path(IMGAES_DIR).glob(f'**/{pattern}'))
 
     all_label = []
+    imagename_file = []
     for path in paths:
+        print(path)
         image = cv2.imread(str(path))
         gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         ret, binary_image = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
@@ -217,7 +219,6 @@ if __name__ == '__main__':
 
         idx = None
         text = []
-        imagename_file = []
         for i, polygon in enumerate(enclosing_quads):
             quadrangle = np.float32(polygon)
             warp_image = get_warped_image(image, quadrangle)
@@ -228,9 +229,9 @@ if __name__ == '__main__':
                 print(idx)
                 continue
 
-            filename = idx + '_' + str(i)
+            filename = idx + '_' + str(i - 1)
 
-            cv2.imwrite(TEXTLINES_DIR + filename + '_uncrop.png', warp_image)
+            # cv2.imwrite(TEXTLINES_DIR + filename + '_uncrop.png', warp_image)
 
             warp_image = crop_image(warp_image)
             cv2.imwrite(TEXTLINES_DIR + filename + '.png', warp_image)
@@ -239,7 +240,7 @@ if __name__ == '__main__':
                 f. write(text[i - 1])
 
             all_label.append(filename + '.png' + '\t' + text[i - 1] + '\n')
-            imagename_file.append(filename + '.png')
+            imagename_file.append(filename + '.png' + '\n')
         #     for i, point in enumerate(polygon):
         #         cv2.circle(image, center=tuple(point), radius=3, color=(0, 0, 255), thickness=-1)
         #         cv2.line(image, pt1=tuple(polygon[i % len(polygon)]),
