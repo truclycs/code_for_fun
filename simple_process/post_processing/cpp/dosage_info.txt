@@ -1,0 +1,160 @@
+Pastes
+Extracts
+Liquid extracts
+Semi-solid extracts
+Dry extracts
+Ointments
+Tinctures
+Topical oil solutions
+Drug solution
+Oral solutions
+Topical solutions
+Irrigation solutions
+Rectal solutions
+Otic sokutions
+Eye drop solutions (eye drops)
+Eye drop solutions
+eye drops
+Injection solutions (solutions for injection)
+Injection solutions
+solutions for injection
+Infusion solutions (solutions for infusion)
+Infusion solutions
+solutions for infusion
+Concentrated solutions for injection
+Concentrated solutions for infusion
+Injectable oil solutions (oil solution for injection)
+Injectable oil solutions
+oil solution for injection
+Solutions for nebulization
+Spirits
+Elixirs
+Gels
+Oromucosal gel
+Rectal gels
+Ocular inserts
+Transdermal therapeutic systems
+Transdermal drug delivery systems
+Drug suspensions
+Ophthalmic suspensions
+Otic suspensions
+Topical suspensions
+Suspensions for injection
+Suspensions for injection
+Rectal suspension
+Creams
+Liposomes
+Emulsion
+Oral emulsion
+Emulsions for injection
+Emulsions for infusion
+Topical emulsions
+Rectal emulsions
+Pellets
+Syrups
+Dry syrups
+Powders
+Powders for cutaneous (dusting powders)
+Powders for cutaneous
+dusting powders
+Powders for inhalation
+Powders for solution
+Powders for lotions
+Powders for suspension
+Powders for injections
+Powders for infusions
+Oral powders
+Effervescent granules
+Granules
+Effervescent granules
+Granules for suspensions
+Transdermal patches
+Suppositories
+Pessaries
+Targeted release drug
+Inhalations
+Aerosol
+Inhalation aerosol
+Topical aerosol
+Solid aerosol
+Foam aerosol
+Ointments
+Ophthalmic ointments (Eye ointment)
+Ophthalmic ointments
+Eye ointment
+Eye drops
+Nasal drops
+Ear drops
+Injections
+Lyophilized injections (Lyophilized powders for injection)
+Lyophilized injections
+Lyophilized powders for injection
+Infusions
+Nasal sprays
+Oromucosal spray
+Ear sprays
+Mouthwashes
+Capsule
+Enteric coated capsules (Delayed-release capsules)
+Enteric coated capsule
+Delayed-release capsules
+Extended-release capsules (Prolonged-action capsules, sustained release capsules)
+Extended-release capsules 
+Prolonged-action capsules, sustained release capsules
+Prolonged-action capsules
+sustained release capsules
+Repeat-action capsules
+Hard gelatin capsule
+Rectal capsules
+Vaginal capsules
+Gastro-resistant capsules
+Soft gelatin capsule
+soft
+Tablets
+Coated tablets
+Sugar coated tablets
+Film coated tablets
+Film-coated tablet
+film-coated tablets
+Enteric coated tablets (Delayed-release tablets)
+Enteric coated tablets
+Delayed-release tablets
+Sublingual tablets
+Vaginal tablets
+Extended-release tablets (sustained release tablets)
+Extended-release tablets
+sustained release tablets
+Gastro-resistant tablets
+Uncoated tablets
+Soluble tablets
+Chewable tablets
+Buccal tablets
+Dispersible tablets
+Orodispersible tablets
+Effervescent tablets
+Pills
+Implants
+Lozenges
+vials and solvent
+solution injectable
+pre-filled syringes
+preparazione iniettabile
+Oral drops
+Brausetabletten
+vial for injection
+Puiver zur Zubereitung einer Suspension
+Powder for solution for injection/infusion
+Powder for solution for injection
+Powder for solution for infusion
+solution for infusion
+solution for injection
+Solution for injection or infusion
+Pulver und Losungsmittel zur Herstellung einer
+Kapseln
+lyophilisate
+Oral suspension
+Modified-release tablet
+hard
+Suppository
+Retardtabletten (extended-release tablets)
+Powder and Solvent for Solution for Injection
