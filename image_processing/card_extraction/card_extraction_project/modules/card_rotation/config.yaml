@@ -1,0 +1,8 @@
+pytorch:
+  module: modules.card_rotation.pytorch.rotator
+  name: CardRotator
+  CardRotator:
+    num_classes: 4
+    weight_path: '''models/weights/card_rotation/pytorch/2011171116/best_model_92_loss=-0.0004.pt'''
+    image_size: (224, 224)
+    cuda: False

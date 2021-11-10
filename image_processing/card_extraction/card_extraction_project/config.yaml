@@ -1,0 +1,5 @@
+card_extraction:
+  module: modules.card_extraction.card_extraction
+  name: CardExtraction
+  CardExtraction:
+    mode: '''pytorch'''

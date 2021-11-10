@@ -1,0 +1,23 @@
+pytorch:
+  module: modules.card_extraction.pytorch.extractor
+  name: CardExtractor
+  CardExtractor:
+    arch_config:
+      module: models.definitions.maskrcnn
+      name: MaskrcnnResnet50FPN
+      MaskrcnnResnet50FPN:
+        num_classes: 3
+    warper_config:
+      module: modules.card_extraction.pytorch.warper
+      name: WarpedCard
+      WarpedCard:
+        binary_threshold: 0.6
+        contour_area_threshold: 0.03
+        vertical_threshold: 20
+        iou_threshold: 0.8
+    nms_iou_threshold: 0.4
+    card_area_threshold: 0.1
+    pred_score_threshold: 0.7
+    weight_path: '''models/weights/card_extraction/pytorch/2011110823/best_model_31_dice_mAP=0.9705.pt'''
+    image_size: (768, 768)
+    cuda: False
