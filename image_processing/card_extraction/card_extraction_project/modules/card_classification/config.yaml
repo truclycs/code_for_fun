@@ -1,0 +1,10 @@
+pytorch:
+  module: modules.card_classification.pytorch.classifier
+  name: CardClassifier
+  CardClassifier:
+    classes: ['CMND_front', 'CMND_back', 'CCCD_front', 'CCCD_back', 'BLX_front', 'BLX_back', 'CMCC_front', 'PASSPORT', 'PASSPORT_OTHER', 'others']
+    num_classes: 10
+    weight_path: '''models/weights/card_classification/pytorch/2011181202/best_model_30_loss=-0.0051.pt'''
+    image_size: (224, 224)
+    cuda: False
+    bin_threshold: 0.60
