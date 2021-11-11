@@ -7,7 +7,7 @@ def min_num_rotations(s):
         # else:
         #     min_total += min(ord(pre) - ord(c), ord('z') - ord(pre) + ord(c) - ord('a') + 1)
         distance = abs(ord(c) - ord(pre))
-        min_total += distance if distance < 13 else (26 - distance)     
+        min_total += distance if distance < 13 else (26 - distance)
         pre = c
     return min_total
 
