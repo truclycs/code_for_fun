@@ -133,13 +133,12 @@ def test():
     sn = Splitter(dosage_info_path='dosage_info.yaml',
                   field_drug=[],
                   field_dosage=[])
-
+    
     for predict in predicts:
         name, dosage_forms = sn.split_name(predict)
         print("Original: ", predict)
         print("Name: ", name)
         print("Dosage forms: ", dosage_forms)
         print()
-
 
 test()

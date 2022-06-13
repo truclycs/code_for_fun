@@ -1,4 +1,3 @@
-import shutil
 from pathlib import Path
 
 
@@ -12,8 +11,8 @@ remove = []
 with open(file_predict, 'r') as f:
     lines = f.read()
     lines = lines.split('\n')
-    for line in lines:    
-        
+    for line in lines:
+
         if len(line.split()) == 4:
             print(line)
             file, gt, pre, right = line.split()
@@ -28,8 +27,8 @@ with open(file_predict, 'r') as f:
                 with open(file_out, 'w') as ff:
                     ff.write(right)
             else:
-                remove.append(file)     
-                
+                remove.append(file)
+
 
 new_label = []
 with open(file_replace, 'r') as f:
@@ -47,7 +46,3 @@ with open(file_replace, 'r') as f:
 with open(save_file, 'w') as f:
     for label in new_label:
         f.write(label[0] + '\t' + label[1] + '\n')
-        
-        
-            
-        

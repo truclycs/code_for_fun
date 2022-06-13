@@ -14,9 +14,9 @@ DISTANCE = 0.1
 # RATIO_HEIGHT = 0.3
 # RATIO_WIDTH = 1
 
-TEXTLINES_DIR = '/home/trucly/Documents/DATASET/hw_collect/TEXTLINES/'
-IMGAES_DIR = '/home/trucly/Documents/DATASET/hw_collect/images/'
-TEXT_FILES_DIR = '/home/trucly/Documents/DATASET/hw_collect/text_files/'
+TEXTLINES_DIR = '/home/trucly/Documents/dataset/03_hw_collect/hn01/textlines/'
+IMGAES_DIR = '/home/trucly/Documents/dataset/03_hw_collect/hn01/fail_case_images/'
+TEXT_FILES_DIR = '/home/trucly/Documents/dataset/03_hw_collect/01_text_files/'
 
 
 def get_data(data_path):

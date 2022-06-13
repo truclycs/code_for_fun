@@ -1,0 +1,14 @@
+doc_evaluator:
+  module: accuracy.doc_evaluator
+  class: DocEvaluator
+  DocEvaluator:
+    doc_reporter:
+      module: accuracy.report_generation.general_report
+      class: GeneralReport
+      GeneralReport:
+        output_dir: '''scripts/data/report/'''
+        is_appending_date: True
+    ignored_fields:
+      - ''''''
+    iou_threshold: 0.00
+    report_name: '''info_evaluation'''
