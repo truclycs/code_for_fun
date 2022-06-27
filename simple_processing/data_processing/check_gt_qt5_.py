@@ -1,29 +1,19 @@
-import csv
-import glob
-import json
 import os
-import re
-import sys
-from pathlib import Path
-
-import cv2
 import numpy as np
-import pandas as pd
+from pathlib import Path
 from PIL import Image
 from PIL.ImageQt import ImageQt
-from PyQt5.QtCore import QEvent, QSize, Qt, pyqtSignal, qDebug
-from PyQt5.QtGui import (QColor, QFont, QFontMetrics, QGuiApplication, QImage,
-                         QImageReader, QImageWriter, QIntValidator, QKeyEvent,
-                         QPainter, QPalette, QPixmap, QKeySequence)
-from PyQt5.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLineEdit, QDialog,
-                             QMainWindow, QMessageBox, QPushButton, QGroupBox,
-                             QScrollArea, QScrollBar, QShortcut, QSizePolicy,
-                             QVBoxLayout, QWidget)
+from PyQt5.QtCore import QEvent, Qt, pyqtSignal
+from PyQt5.QtGui import (QFont, QFontMetrics, QImage, QIntValidator, QKeyEvent, QPalette, QPixmap, QKeySequence)
+from PyQt5.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLineEdit, QMainWindow, QMessageBox, QScrollArea,
+                             QScrollBar, QShortcut, QSizePolicy, QVBoxLayout, QWidget)
 
 WIN_SIZE = (1024, 128)
 
+
 def distance(p1, p2):
     return np.linalg.norm(np.array(p1) - np.array(p2))
+
 
 class SwitchSignal(QWidget):
 
@@ -39,17 +29,15 @@ class SwitchSignal(QWidget):
             print('KEy Down')
             self.next.emit()
 
+
 class Dataset():
     def __init__(self, list_file: Path, image_dir: Path):
         image_lines = [Path(line.strip()) for line in open(list_file, 'rt', encoding='utf-8').readlines()]
-
-        # false_idx = [i for i, line in enumerate(log_lines) if line.split()[-1] == 'False']
 
         self.textlines = []
         for image_path in image_lines:
             textline = TextLine(image_path)
             self.textlines.append(textline)
-
 
     def __getitem__(self, idx):
         return self.textlines[idx]
@@ -79,7 +67,6 @@ class TextLine():
     def save_image(self, new_image: Image.Image):
         print(self.image_path)
         new_image.save(self.image_path)
-
 
 
 class App(QMainWindow):
@@ -136,7 +123,7 @@ class App(QMainWindow):
 
         self.label_text = QLineEdit("label")
         f = self.label_text.font()
-        f.setPointSize(27) # sets the size to 27
+        f.setPointSize(27)  # sets the size to 27
         f.setStyleHint(QFont.Monospace)
         self.label_text.setFont(f)
         self.label_text.setFocus()
@@ -180,7 +167,6 @@ class App(QMainWindow):
         self._is_rotate = False
 
     def save_current_line(self):
-        
         if self.current_textline.textline() != self.label_text.text():
             print('Save text')
             self.current_textline.save(self.label_text.text())
@@ -193,7 +179,7 @@ class App(QMainWindow):
     def jump_to_line_index(self):
         step = int(self.current_line_index.text())
         self.set_step(step)
-    
+
     def eventFilter(self, source, event):
         if (event.type() == QEvent.KeyPress and source is self.label_text):
             if event.key() == Qt.Key_Down:
@@ -234,6 +220,8 @@ class App(QMainWindow):
         self.current_textline = self.dataset[step]
         self.current_index = step
 
+        print(self.current_textline.image_path)
+
         image = Image.open(self.current_textline.image_path)
         label = self.current_textline.textline()
 
@@ -256,7 +244,6 @@ class App(QMainWindow):
         self.label_text.setText(label)
         self.loadImage(image)
 
-        #### Resize font
         # Use binary search to efficiently find the biggest font that will fit.
         max_size = 27
         min_size = 1
@@ -279,7 +266,6 @@ class App(QMainWindow):
         font.setPointSize(min_size)
         self.label_text.setFont(font)
 
-
     def loadImage(self, pillow_image: Image.Image):
         image_w, image_h = pillow_image.size
         target_h = 64
@@ -293,7 +279,7 @@ class App(QMainWindow):
         self.image = ImageQt(pillow_image)
         self.imageLabel.setPixmap(QPixmap.fromImage(self.image))
         self.imageLabel.setFixedSize(image_w, image_h)
-        
+
         self.adjustScrollBar(self.scrollArea.horizontalScrollBar(), 0)
         self.adjustScrollBar(self.scrollArea.verticalScrollBar(), 1.0)
 
@@ -309,13 +295,13 @@ class App(QMainWindow):
         self._is_rotate = True
 
     def adjustScrollBar(self, scrollBar: QScrollBar, factor: float):
-        scrollBar.setValue(int(factor * scrollBar.value()
-                                + ((factor - 1) * scrollBar.pageStep()/2)))
+        scrollBar.setValue(int(factor * scrollBar.value() + ((factor - 1) * scrollBar.pageStep()/2)))
 
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = App('./not_correct_ocr_paths_thin.txt', './')
+    window = App('/home/trucly/Documents/DATASET/PROJECTS/NATCOM/card_type_2/textlines/card_type_2.txt',
+                 './home/trucly/Documents/DATASET/PROJECTS/NATCOM/card_type_2/textlines/')
     window.show()
     # window.fixedText.setFocus()
     app.exec_()
