@@ -60,8 +60,14 @@ class Dataset():
 
 class TextLine():
     def __init__(self, image_path: Path):
-        self.image_path = image_path
+        self.image_path = self.get_path(image_path)
         self.txt_path = self.image_path.with_suffix('.txt')
+
+    def get_path(self, image_path):
+        for root, dirs, files in os.walk('/home/trucly/Documents/DATASET/PROJECTS/NATCOM/card_type_2/textlines/'):
+            for name in files:
+                if str(image_path) in name:
+                    return Path(os.path.abspath(os.path.join(root, name)))
 
     def textline(self):
         return open(str(self.txt_path), 'rt', encoding='utf-8').readline().strip()
@@ -71,6 +77,7 @@ class TextLine():
         open(txt_path, 'wt', encoding='utf-8').write(new_label)
 
     def save_image(self, new_image: Image.Image):
+        print(self.image_path)
         new_image.save(self.image_path)
 
 
