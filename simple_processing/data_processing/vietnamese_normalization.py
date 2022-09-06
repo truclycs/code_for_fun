@@ -1,5 +1,6 @@
 import unicodedata
 
+
 inverse_mapping_table = {
     # 0110
     u"Đ": [
@@ -35,14 +36,14 @@ def vietnamese_normalize(text):
     """
     text = unicodedata.normalize("NFC", text)
     text = map_text_to_tcvn(text)
-    return text
+    return "".join(text)
 
 
 if __name__ == '__main__':
     s = 'Giỏi'
     s1 = b'Gio\xcc\x89i'.decode()
     s2 = b'Gi\xe1\xbb\x8fi'.decode()
-    s1 = "".join(vietnamese_normalize(s1))
-    s2 = "".join(vietnamese_normalize(s2))
+    s1 = vietnamese_normalize(s1)
+    s2 = vietnamese_normalize(s2)
 
     print(s.encode() == s2.encode())

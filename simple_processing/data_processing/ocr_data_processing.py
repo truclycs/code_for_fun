@@ -6,9 +6,12 @@ import numpy as np
 from pathlib import Path
 from vietnamese_normalization import vietnamese_normalize
 
-START_KEYS = ['ORGAN_NAME', 'DEG_NAME', 'V_NAME', 'V_GENDER', 'V_MAJOR',
-              'V_RANKING', 'V_MODE', 'ISSUE_DATE', 'V_SIGN_NAME', 'V_SERIAL_NO',
-              'V_REF_NO', 'V_GRAD_YEAR', 'V_DOB', 'DATE']
+# START_KEYS = ['ORGAN_NAME', 'DEG_NAME', 'V_NAME', 'V_GENDER', 'V_MAJOR',
+#               'V_RANKING', 'V_MODE', 'ISSUE_DATE', 'V_SIGN_NAME', 'V_SERIAL_NO',
+#               'V_REF_NO', 'V_GRAD_YEAR', 'V_DOB', 'DATE']
+
+START_KEYS = ['header_1', 'header_2', 'v_nat', 'v_name_1', 'v_name_2', 'v_eth',
+              'v_bd', 'v_sex', 'v_de', 'v_pn', 'v_id', 'v_bp', 'mrz1', 'mrz2']
 
 
 class OCRDataProcessing():
@@ -48,7 +51,7 @@ class OCRDataProcessing():
         return warped
 
     def _is_label(self, label):
-        return any([label.startswith(key) for key in START_KEYS])
+        return any([label.startswith(key.upper()) for key in START_KEYS])
 
     def copy_image(self):
         # label_paths = natsorted(Path(args.input_dir).glob('**/*.txt'), key=lambda x: x.stem)
@@ -89,11 +92,12 @@ class OCRDataProcessing():
 
     def cut_textline(self, paths):
         filenames = []
+        filename_label = []
         values = []
         for path in paths:
             count = 0
             filename = str(path)
-            with open(filename.replace('png', 'json'), 'r') as f:
+            with open(filename.replace(filename.split('.')[-1], 'json'), 'r') as f:
                 obj = json.load(f)
 
             image_name = obj['imagePath']
@@ -120,14 +124,18 @@ class OCRDataProcessing():
                         filename = path.stem + '_' + label + '_' + str(count)
                         value = "".join(vietnamese_normalize(value))
                         value = value.replace('–', '-')
-                        image_path = self.output_dir.joinpath(filename + '.jpg')
+                        folder_path = self.output_dir.joinpath(label)
+                        if not folder_path.exists():
+                            folder_path.mkdir(parents=True)
+                        image_path = folder_path.joinpath(filename + '.jpg')
                         cv2.imwrite(str(image_path), line)
-                        text_path = self.output_dir.joinpath(filename + '.txt')
+                        text_path = folder_path.joinpath(filename + '.txt')
                         with open(str(text_path), 'wt') as f:
                             f.write(value)
 
                         count += 1
                         filenames.append(filename + '.jpg')
+                        filename_label.append(label + '/' + filename + '.jpg')
                         values.append(value)
 
         label_path = self.output_dir.joinpath('label.txt')
@@ -138,6 +146,11 @@ class OCRDataProcessing():
         filename_path = self.output_dir.joinpath('filename.txt')
         with open(str(filename_path), 'a') as f:
             for filename in filenames:
+                f.write(filename + '\n')
+
+        filename_label_path = self.output_dir.joinpath('filename_label.txt')
+        with open(str(filename_label_path), 'a') as f:
+            for filename in filename_label:
                 f.write(filename + '\n')
 
     def convert_text_line_2_one_file(self, text_file):
@@ -164,6 +177,30 @@ class OCRDataProcessing():
                 if 'ƒ' in line:
                     print(line)
 
+    def get_dict(self):
+        data_file = '/home/trucly/Documents/DATASET/PROJECTS/NATCOM/PASSPORT/textlines/label.txt'
+        with open(data_file, "r") as f:
+            data = f.read().split('\n')
+        dict_ = {}
+        for line in data:
+            filename, value = line.split('\t')
+            for c in value:
+                dict_[c] = 1
+
+        return "".join(sorted(list(dict_.keys())))
+
+    def get_dict_from_json_label(self, paths):
+        dict = {}
+        for path in paths:
+            print(path)
+            path = str(path)
+            with open(str(path), 'r') as f:
+                label = f.read()
+                for c in label:
+                    dict[c] = 1
+
+        return "".join(sorted(list(dict.keys())))
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -173,8 +210,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir) if args.output_dir else None
-    if not output_dir.exists():
-        output_dir.mkdir(parents=True)
+    # if not output_dir.exists():
+        # output_dir.mkdir(parents=True)
 
     patterns = args.patterns
     input_dir = Path(args.input_dir)
@@ -183,7 +220,9 @@ if __name__ == "__main__":
         paths += list(input_dir.glob(f'**/{pattern}'))
 
     process = OCRDataProcessing(input_dir, output_dir)
-    process.cut_textline(paths)
+    # process.cut_textline(paths)
+    # print(process.get_dict())
+    print(process.get_dict_from_json_label(paths))
 
 
 # csv to crnn
