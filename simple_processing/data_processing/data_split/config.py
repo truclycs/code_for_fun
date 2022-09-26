@@ -1,1 +1,0 @@
-CARD_TYPE = 'DEGREE'
