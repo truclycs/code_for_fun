@@ -1,0 +1,115 @@
+info/output/000019/1.json	SỞ KHOA HỌC VÀ CÔNG NGHỆ HÀ NỘI |TRUNG TÂM KIỂM NGHIỆM THUỐC - THỰC PHẨM |VÀ NGHIÊN CỬU ỨNG DỤNG
+info/output/000481/1.json	CÔNG TY TNHH MTV KHOA HỌC CÔNG NGHỆ HOÀN VŨ |TRUNG TÂM PHẤN TÍCH CÔNG NGHỆ CAO |HOAN VU HIGH-TECH ANALYTICAL LABORATORY
+{% comment %} info/output/000481/2.json	CÔNG TY TNHH MTV KHOA HỌC CÔNG NGHỆ HOÀN VŨ |TRUNG TÂM PHÂN TÍCH CÔNG NGHỆ CAO |HOAN VU HIGH-TECH ANALYTICAL LABORATORY {% endcomment %}
+info/output/000482/1.json	
+{% comment %} info/output/000482/2.json	CÔNG TY TNHH EUROFINS SẮC KÝ HẢI ĐĂNG {% endcomment %}
+{% comment %} info/output/000482/3.json	CÔNG TY TNHH EUROFINS SÁC KÝ HẢI ĐĂNG {% endcomment %}
+{% comment %} info/output/000482/4.json	CÔNG TY TNHH EUROFINS SẮC KÝ HẢI ĐĂNG {% endcomment %}
+info/output/000682/1.json	SỞ Y TẾ THANH HÓA |TRUNG TÂM KIỂM NGHIỆM
+info/output/000688/1.json	BỘ Y TẾ |VIỆN Y TẾ CÔNG CỘNG |THÀNH PHỐ HỒ CHÍ MINH
+{% comment %} info/output/000688/2.json	GIÁM ĐỐC TRUNG TÂM KIỂM NGHIỆM ATTP |KHU VỰC PHÍA NAM {% endcomment %}
+info/output/000756/1.json	TRUNG TÂM CHỨNG NHẬN PHÙ HỢP (QUACERT) |VIETNAM CERTIFICATION CENTRE (QUACERT)
+info/output/000792/1.json	VIỆN THỰC PHẨM CHỨC NĂNG |TRUNG TÂM KIỂM NGHIỆM
+{% comment %} info/output/000792/2.json	 {% endcomment %}
+info/output/000882/1.json	SỞ KHOA HỌC VÀ CÔNG NGHỆ TP. HỒ CHÍ MINH |TRUNG TÂM DỊCH VỤ PHÂN TÍCH THÍ NGHIỆM TP. HỒ CHÍ MINH |CENTER OF ANALYTICAL SERVICES AND EXPERIMENTATION HCMC
+{% comment %} info/output/000882/2.json	SỞ KHOA HỌC VÀ CÔNG NGHỆTP.HỒ CHÍ MINH |TRUNG TÂM DỊCH VỤ PHÂN TÍCH THÍ NGHIỆM TP. HỒ CHÍ MINH |CENTER OF ANALYTICAL SERVICES AND EXPERIMENTATION HCMC {% endcomment %}
+info/output/000989/1.json	CÔNG TY TNHH DV KHCN KHUÊ NAM |KHUE NAM TECHNOLOGY SCIEN |VICES CO.,LTD
+info/output/001112/1.json	CÔNG TY TNHH PHÂN TÍCH KIỂM NGHIỆM VIỆT TÍN |VIET TIN TESTING CO., LTD
+info/output/001165/1.json	TRUNG TÂM NGHIÊN CỨU ỨNG DỤNG VÀ KIỂM TRA CHẤT LƯỢNG SẢN PHẨM HI-TECH |HI-TECH APPLIED RESEARCH AND TESTING PRODUCT CENTER |ISO/IEC 17025 - VILAS 866
+info/output/001404/1.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3
+info/output/001404/2.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3
+info/output/001425/1.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER
+info/output/001427/1.json	VIỆN KIỂM NGHIỆM AN TOÀN VỆ SINH THỰC PHẨM QUỐC GIA |NATIONAL INSTITUTE FOR FOOD CONTROL (NIFC)
+info/output/001460/1.json	VINACONTROL - TRUNG TÂM PHẬN TÍCH VÀ THỬ NGHIỆM 1 |GIÁM ĐỐC
+info/output/001492/1.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3
+info/output/001492/2.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3
+{% comment %} info/output/001492/3.json	VIỆN THỰC PHẨM CHỨC NĂNG |TRUNG TÂM KIỂM NGHIỆM {% endcomment %}
+{% comment %} info/output/001492/4.json	 {% endcomment %}
+{% comment %} info/output/001492/5.json	CÔNG TY TNHH DƯỢC PHẨM NAM HÂN {% endcomment %}
+{% comment %} info/output/001492/6.json	CÔNG TY TNHH EUROFINS SẮC KÝ HẢI ĐĂNG {% endcomment %}
+info/output/001544/1.json	CÔNG TY CP DV KHOA HỌC CÔNG NGHỆ CHẤN NAM
+{% comment %} info/output/001566/1.json	 {% endcomment %}
+{% comment %} info/output/001566/2.json	 {% endcomment %}
+info/output/001566/3.json	 TUV SUD Vietnam Co., Ltd
+info/output/001580/1.json	PHÒNG KIỂM TRA CHẤT LƯỢNG
+{% comment %} info/output/001580/2.json	 {% endcomment %}
+info/output/001632/1.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 1
+info/output/001684/1.json	CÔNG TY DƯỢC PHẨM VÀ THƯƠNG MẠI THÀNH CÔNG (TNHH) |PHÒNG KIỂM NGHIỆM HÓA LÝ - VI SINH
+{% comment %} info/output/001684/2.json	CÔNG TY DƯỢC PHẨM VÀ THƯƠNG MẠI THÀNH CÔNG (TNHH) |PHÒNG KIỂM NGHIỆM HÓA LÝ - VI SINH {% endcomment %}
+info/output/001826/1.json	CTY CỔ PHẦN XNK Y TẾ DOMESCO
+{% comment %} info/output/001826/2.json	 {% endcomment %}
+info/output/001908/1.json	SỞ Y TẾ HÀ NỘI |HANOI DEPARTMENT OF HEALTH |TRUNG TÂM Y TẾ DỰ PHÒNG
+{% comment %} info/output/001908/2.json	SỞ Y TẾ HÀ NỘI |HANOI DEPARTMENT OF HEALTH |TRUNG TÂM Y TẾ DỰ PHÒNG {% endcomment %}
+{% comment %} info/output/001908/3.json	SỞ Y TẾ HÀ NỘI |HANOI DEPARTMENT OF HEALTH |TRUNG TÂM KIỂM SOÁT BỆNH TẬT {% endcomment %}
+{% comment %} info/output/001908/4.json	TRUNG TÂM NGHIÊN CỨU ỨNG DỤNG VÀ KIỂM TRA CHẤT LƯỢNG SẢN PHẨM HI-TECH |HI-TECH APPLIED RESEARCH AND TESTING PRODUCT CENTER |ISO/IEC 17025 - VILAS 866 {% endcomment %}
+info/output/001951/1.json	BỘ Y TẾ |VIỆN DINH DƯỠNG QUỐC GIA |NATIONAL INSTITUTE OF NUTRITION (NIN)
+{% comment %} info/output/001951/2.json	 {% endcomment %}
+info/output/001957/1.json	TRUNG TÂM PHÂN TÍCH  KỸ THUẬT CAO SÀI GÒN Công ty TNHH Khoa Học và Công Nghệ SÀI GÒN
+{% comment %} info/output/001957/2.json	TRUNG TÂM PHÂN TÍCH  KỸ THUẬT CAO SÀI GÒN Công ty TNHH Khoa Học và Công Nghệ SÀI GÒN {% endcomment %}
+{% comment %} info/output/001957/3.json	CÔNG TY CỔ PHẦN PHÁT TRIỂN CÔNG NGHỆ {% endcomment %}
+{% comment %} info/output/001957/4.json	TRUNG TÂM PHÂN TÍCH - KIỂM NGHIỆM TVU {% endcomment %}
+{% comment %} info/output/001957/5.json	 {% endcomment %}
+info/output/002006/1.json	BAN QUẢN LÝ AN TOÀN THỰC PHẨM TP. HỒ CHÍ MINH |TRUNG TÂM KIỂM NGHIỆM |THUỐC, MỸ PHẨM, THỰC PHẨM
+{% comment %} info/output/002006/2.json	 {% endcomment %}
+info/output/002106/1.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER
+{% comment %} info/output/002106/2.json	WARRANTEK JOINT STOCK COMPANY -TESTING CENTER {% endcomment %}
+{% comment %} info/output/002106/3.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER {% endcomment %}
+info/output/002125/1.json	CÔNG TY TNHH DƯỢC PHẨM LIÊN HỢP
+{% comment %} info/output/002125/2.json	 {% endcomment %}
+{% comment %} info/output/002125/3.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3 {% endcomment %}
+{% comment %} info/output/002125/4.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3 {% endcomment %}
+{% comment %} info/output/002125/5.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3 {% endcomment %}
+{% comment %} info/output/002125/6.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3 {% endcomment %}
+{% comment %} info/output/002125/7.json	BỘ Y TẾ |VIỆN KIỂM NGHIỆM AN TOÀN VỆ SINH THỰC PHẨM QUỐC GIA |NATIONAL INSTITUTE FOR FOOD CONTROL (NIFC) {% endcomment %}
+info/output/002205/1.json	VIỆN CÔNG NGHỆ HÓA HỌC
+info/output/002501/1.json	TRUNG TÂM Y TẾ DỰ PHÒNG HẢI PHÒNG |KHOA XÉT NGHIỆM
+info/output/003207/1.json	SỞ Y TẾ VĨNH PHÚC |TRUNG TÂM KIỂM NGHIỆM
+{% comment %} info/output/003207/2.json	 {% endcomment %}
+info/output/003541/1.json	 Intertek Vietnam Limited
+{% comment %} info/output/003541/2.json	TRUNG TÂM KỸ THUẬT TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG 3 |QUALITY ASSURANCE & TESTING CENTER 3 {% endcomment %}
+info/output/003703/1.json	TRUNG TÂM KIỂM NGHIỆM
+{% comment %} info/output/003703/2.json	TRUNG TÂM KIỂM NGHIỆM {% endcomment %}
+info/output/003899/1.json	
+{% comment %} info/output/003899/2.json	 {% endcomment %}
+info/output/004238/1.json	TRUNG TÂM KỸ THUẬT THÍ NGHIỆM VÀ ỨNG DỤNG KHCN ĐỒNG THÁP |DONG THAP EXPERIMENT TECHNIQUE AND APPLING SCIENCE TECHNOLOGY CENTER
+{% comment %} info/output/004238/2.json	 {% endcomment %}
+info/output/004311/1.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER
+{% comment %} info/output/004311/2.json	NAMRANTK JONT STOCK COMPANY TISTIN {% endcomment %}
+info/output/004856/1.json	TRUNG TÂM PHÂN TÍCH VÀ GIÁM ĐỊNH THỰC PHẨM QUỐC GIA |NATIONAL CENTER FOR FOOD ANALYSIS AND ASSESSMENT |ISO/IEC 17025 - VILAS 259
+info/output/004865/1.json	 CÔNG TY Cp DƯỢC HẬU GIANG
+{% comment %} info/output/004865/2.json	TRUNG TÂM KỸ THUẬT |TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG CẦN THƠ |CANTHO TECHNICAL CENTER OF STANDARDS METROLOGY AND QUALITY {% endcomment %}
+{% comment %} info/output/004865/3.json	TRUNG TÂM KỸ THUẬT |TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG CẦN THƠ |CANTHO TECHNICAL CENTER OF STANDARDS METROLOGY AND QUALITY {% endcomment %}
+{% comment %} info/output/004865/4.json	TRUNG TÂM KỸ THUẬT |TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG CẦN THƠ |CANTHO TECHNICAL CENTER OF STANDARDS METROLOGY AND QUALITY {% endcomment %}
+info/output/004882/1.json	TRUNG TÂM NGHIÊN CỨU THỰC PHẨM & MỸ PHÂN |PHÒNG THÍ NGHIỆM THỰC PHẨM & MỸ PHẨM
+info/output/008717/1.json	CÔNG TY TNHH KHOA HỌC TSL |TRUNG TÂM KIỂM NGHIỆM TSL
+{% comment %} info/output/008717/2.json	CÔNG TY TNHH KHOA HỌC TSL |TRUNG TÂM KIỀM NGHIỆM TSL
+info/output/008717/3.json	CÔNG TY TNHH KHOA HỌC TSL |TRUNG TÂM KIỂM NGHIỆM TSL
+info/output/008717/4.json	CÔNG TY TNHH KHOA HỌC TSL |TRUNG TÂM KIỂM NGHIỆM TSL {% endcomment %}
+info/output/011881/1.json	SỞ Y TẾ HÀ NỘI |TRUNG TÂM Y TẾ DỰ PHÒNG
+{% comment %} info/output/011881/2.json	 {% endcomment %}
+info/output/012416/1.json	VIỆN DINH DƯỠNG QUỐC GIA |NATIONAL INSTITUTE OF NUTRITION (NIN)
+info/output/012618/1.json	TRUNG TÂM KỸ THUẬT |TIÊU CHUẨN ĐO LƯỜNG CHẤT LƯỢNG CẦN THƠ |CANTHO TECHNICAL CENTER OF STANDARDS METROLOGY AND QUALITY
+{% comment %} info/output/012618/2.json	CÔNG TY TNHH EUROFINS SẮC KÝ HẢI ĐĂNG {% endcomment %}
+{% comment %} info/output/012618/3.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER
+info/output/012618/4.json	WARRANTEK JOINT STOCK COMPANY - TESTING CENTER {% endcomment %}
+info/output/012849/1.json	WARRANTEK JOINT STOCK COMPANY -TESTING CENTER
+info/output/015183/1.json	SỞ Y TẾ HÀ NỘI |TRUNG TÂM KIỂM NGHIỆM
+{% comment %} info/output/015183/2.json	 {% endcomment %}
+info/output/018025/1.json	
+{% comment %} info/output/018025/2.json	 {% endcomment %}
+{% comment %} info/output/018025/3.json	 {% endcomment %}
+{% comment %} info/output/018025/4.json	 {% endcomment %}
+info/output/020396/1.json	TRUNG TÂM KIỂM NGHIỆM MSOIIEC 17025:2005: ĐĂNG KÝ BỘ KH&CN
+info/output/024057/1.json	VIỆN NGHIÊN CỨU & PHÁT TRIỂN |SẢN PHẨM THIÊN NHIÊN |PHÒNG PHÂN TÍCH - KIỂM NGHIỆM
+info/output/024777/1.json	BỘ Y TẾ |VIỆN PASTEUR NHA TRANG |TRUNG TÂM KIỂM NGHIỆM ATVSTP KHU VỰC MIÊN TRUNG
+{% comment %} info/output/024777/2.json	GIÁM ĐỐC TRUNG TÂM KIỂM NGHIỆM ATVSTP |KHU VỰC MIỀN TRUNG {% endcomment %}
+{% comment %} info/output/024777/3.json	BỘ Y TẾ |VIỆN PASTEUR NHA TRANG |TRUNG TÂM KIỂM NGHIỆM ATVSTP KHU VỰC MIỀN TRUNG {% endcomment %}
+info/output/026066/1.json	 DLVN
+{% comment %} info/output/026066/2.json	 {% endcomment %}
+info/output/028517/1.json	CÔNG TY TNHH DƯỢC PHẨM NHẤT |NHẤT Công Ty TNHH Dược Phẩm Nhất Nhất tại Long An
+{% comment %} info/output/028517/2.json	 {% endcomment %}
+info/output/029143/1.json	VIỆN NGHIÊN CỨU HẠT NHÂN |TRUNG TÂM PHÂN TÍCH
+{% comment %} info/output/029143/2.json	VIỆN NGHIÊN CỨU HẠT NHÂN |TRUNG TÂM PHÂN TÍCH {% endcomment %}
+info/output/031951/1.json	 Bureau Veritas Viet Nam
+info/output/033268/1.json	VIỆN HÀN LÂM |KHOA HỌC VÀ CÔNG NGHỆ VN |VIỆN KHOA HỌC VẬT LIỆU
+info/output/033511/1.json	CÔNG TY CỔ PHẦN DƯỢC LIỆU VIỆT NAM
